@@ -17,8 +17,8 @@
 # Release name
 PRODUCT_RELEASE_NAME := a51x
 
-# Inherit some common Omni stuff.
-$(call inherit-product, vendor/omni/config/common.mk)
+# Inherit some common aosp stuff.
+$(call inherit-product, vendor/twrp/config/common.mk)
 
 # Inherit from those products. Most specific first.
 $(call inherit-product, $(SRC_TARGET_DIR)/product/core_64_bit.mk)
@@ -39,7 +39,7 @@ PRODUCT_PACKAGES += \
 PRODUCT_COPY_FILES += $(call find-copy-subdir-files,*,device/samsung/a51x/recovery/root,recovery/root)
 
 ## Device identifier. This must come after all inclusions
-PRODUCT_NAME := omni_a51x
+PRODUCT_NAME := twrp_a51x
 PRODUCT_DEVICE := a51x
 PRODUCT_MODEL := SM-A516U
 PRODUCT_BRAND := samsung
