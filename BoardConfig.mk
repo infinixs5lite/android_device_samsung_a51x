@@ -14,6 +14,8 @@
 # limitations under the License.
 #
 
+DEVICE_PATH := device/samsung/a51x
+
 # Bootloader
 BOARD_VENDOR := samsung
 TARGET_SOC := exynos980
@@ -58,9 +60,9 @@ TARGET_BOARD_PLATFORM := universal980
 TARGET_BOARD_PLATFORM_GPU := mali-g77
 
 # Kernel
-TARGET_PREBUILT_KERNEL := device/samsung/a51x/prebuilt/Image
-TARGET_PREBUILT_DTB := device/samsung/a51x/prebuilt/dtb.img
-BOARD_PREBUILT_DTBOIMAGE := device/samsung/a51x/prebuilt/dtbo.img
+TARGET_PREBUILT_KERNEL := $(DEVICE_PATH)/prebuilt/Image
+TARGET_PREBUILT_DTB := $(DEVICE_PATH)/prebuilt/dtb.img
+BOARD_PREBUILT_DTBOIMAGE := $(DEVICE_PATH)/prebuilt/dtbo.img
 BOARD_INCLUDE_DTB_IN_BOOTIMG := true
 BOARD_INCLUDE_RECOVERY_DTBO := true
 TARGET_KERNEL_ARCH := arm64
