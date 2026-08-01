@@ -36,7 +36,8 @@ $(call inherit-product, device/samsung/a51x/device.mk)
 PRODUCT_PACKAGES += \
     charger_res_images
 
-PRODUCT_COPY_FILES += $(call find-copy-subdir-files,*,device/samsung/a51x/recovery/root,recovery/root)
+# Manual workaround for common tree
+PRODUCT_COPY_FILES += $(call find-copy-subdir-files,*,$(DEVICE_PATH)/recovery/root,recovery/root)
 
 ## Device identifier. This must come after all inclusions
 PRODUCT_NAME := twrp_a51x
