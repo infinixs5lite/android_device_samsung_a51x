@@ -43,7 +43,11 @@ TARGET_CPU_SMP := true
 ENABLE_CPUSETS := true
 ENABLE_SCHEDBOOST := true
 
+# Building with minimal manifest
 ALLOW_MISSING_DEPENDENCIES := true
+
+# Build Hack
+BUILD_BROKEN_DUP_RULES := true
 
 # File systems
 TARGET_USERIMAGES_USE_EXT4 := true
